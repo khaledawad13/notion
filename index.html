@@ -1,4 +1,31 @@
-<a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="WEATHER" data-theme="original" >NEW YORK WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+<!DOCTYPE html>
+<html lang="en" data-files="Marker-Felt.woff img/wood.png">
+<head>
+
+<meta charset="UTF-8">
+<title>To-Do List</title>
+<link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+<script src="https://get.mavo.io/mavo.es5.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body mv-app="todo" mv-storage="local" mv-mode="edit">
+
+<header>
+	<h1>My tasks</h1>
+	<p><strong>[count(done)]</strong> done out of <strong>[count(task)]</strong> total</p>
+</header>
+
+<ul>
+	<li property="task" mv-multiple>
+		<label>
+			<input property="done" type="checkbox" />
+			<span property="taskTitle">Do stuff</span>
+		</label>
+	</li>
+	<button class="clear-completed" mv-action="delete(task where done)">Clear Completed</button>
+</ul>
+
+
+</body>
+</html>
